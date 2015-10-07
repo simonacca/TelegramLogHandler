@@ -13,8 +13,7 @@ A python log handler that sends log messages via a Telegram bot.
 
 ### Handler setup
 
-* Install the TelegramHandler package
-* Install the dependencies listed in `requirements.txt`
+* Install TelegramHandler by issuing `pip install git+https://github.com/simonacca/TelegramLogHandler/`  
 * use it as shown in the following example
 
 ```
