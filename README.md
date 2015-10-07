@@ -13,9 +13,9 @@ A python log handler that sends log messages via a Telegram bot.
 
 ### Handler setup
 
-* Install TelegramHandler by issuing `pip install git+https://github.com/simonacca/TelegramLogHandler/`  
-* use it as shown in the following example
+Run the following command: `pip install git+https://github.com/simonacca/TelegramLogHandler/`
 
+### Handler usage
 ```
 import logging
 from TelegramHandler import TelegramHandler
