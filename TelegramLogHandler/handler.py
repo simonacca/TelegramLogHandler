@@ -23,12 +23,18 @@ class TelegramHandler(logging.Handler):
         """
         try:
             import requests
+            requests_handler = logging.getLogger("requests")
+
             url = 'https://api.telegram.org/bot{}/sendMessage'.format(self.token)
+
+            requests_handler.propagate = False
             for chat_id in self.ids:
                 payload = {
                     'chat_id':chat_id,
                     'text': self.format(record)
                 }
+
                 requests.post(url, data=payload)
+            requests_handler.propagate = True
         except:
             self.handleError(record)
